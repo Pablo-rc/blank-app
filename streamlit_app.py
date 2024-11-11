@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 
 import datetime as dt 
 
-datetime import datetime, timedelta
-
 # Obtener la fecha de hoy
 hoy =dt.datetime.today().strftime('%Y-%m-%d')
 
