@@ -14,7 +14,7 @@ dias_a_restar = 365
 start = (dt.datetime.today() - dt.timedelta(days=dias_a_restar)).strftime('%Y-%m-%d')
 
 print("Fecha de inicio (start):", start)
-print("Fecha de fin (end):", end)
+print("Fecha de fin (hoy):", hoy)
 
 
 st.title("INTERCITY C.F.")
