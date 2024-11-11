@@ -24,6 +24,7 @@ st.write(
 
 ticker="CITY.MC"
 int=yf.download(ticker, start, end)
+st.write(int.head())
 
 fig, ax = plt.subplots()
 int.Close.plot(kind='line', ax=ax)  # Puedes usar 'line', 'bar', 'scatter', etc.
