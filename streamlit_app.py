@@ -26,6 +26,6 @@ ticker="CITY.MC"
 int=yf.download(ticker, start, end)
 
 fig, ax = plt.subplots()
-int.plot(kind='line', ax=ax)  # Puedes usar 'line', 'bar', 'scatter', etc.
+int.Close.plot(kind='line', ax=ax)  # Puedes usar 'line', 'bar', 'scatter', etc.
 
 st.pyplot(fig)
