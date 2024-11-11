@@ -26,4 +26,4 @@ ticker="CITY.MC"
 int=yf.download(ticker, start, end)
 int
 
-int.plot()
+st.write(int.Close.plot())
