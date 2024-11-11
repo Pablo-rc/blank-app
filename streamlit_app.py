@@ -4,26 +4,26 @@ import numpy as np
 import yfinance as yf
 import matplotlib.pyplot as plt
 
-from datetime import datetime, timedelta
+import datetime as dt 
+
+datetime import datetime, timedelta
 
 # Obtener la fecha de hoy
-end =datetime.today().strftime('%Y-%m-%d')
+hoy =dt.datetime.today().strftime('%Y-%m-%d')
 
 # Restar un número de días (ejemplo: 365 días)
-dias_a_restar = 30
-start = (datetime.today() - timedelta(days=dias_a_restar)).strftime('%Y-%m-%d')
+dias_a_restar = 365
+start = (dt.datetime.today() - dt.timedelta(days=dias_a_restar)).strftime('%Y-%m-%d')
 
 print("Fecha de inicio (start):", start)
 print("Fecha de fin (end):", end)
 
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.title("INTERCITY C.F.")
+st.write("El equipo que te hará millonario")
 
 ticker="CITY.MC"
-int=yf.download(ticker, start, end)
+int=yf.download(ticker, start, end=hoy)
 st.write(int.head())
 
 fig, ax = plt.subplots()
